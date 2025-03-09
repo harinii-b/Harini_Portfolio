@@ -1,0 +1,113 @@
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7); /* Glassmorphism Effect */
+  backdrop-filter: blur(10px);
+  padding: 1rem 5%;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Logo */
+.navbar .logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar .logo:hover {
+  color: #ff4081;
+}
+
+/* Navigation Links */
+.navbar .nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar .nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover Animation (Underline Effect) */
+.navbar .nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background: #ff4081;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.navbar .nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Responsive Navbar */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 4px;
+  background: #fff;
+  margin: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 5%;
+  }
+
+  .hamburger {
+      display: flex;
+  }
+
+  .navbar .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(10px);
+      text-align: center;
+      padding: 1rem 0;
+  }
+
+  .navbar .nav-links.active {
+      display: flex;
+  }
+
+  .navbar .nav-links a {
+      padding: 1rem;
+      width: 100%;
+  }
+}

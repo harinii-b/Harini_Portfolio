@@ -1,0 +1,90 @@
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #1e1e2f;
+  color: #fff;
+  height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 1rem 5%;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.navbar .logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.navbar .nav-links a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 1rem;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+  color: #ff4081;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem;
+}
+
+.hero-left {
+  width: 40%;
+}
+
+.hero-right {
+  width: 60%;
+}
+
+.hero-title {
+  font-size: 5rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.subtext {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #aaa;
+} 
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  background-color: #1e1e2f;
+}
+
+#home, #projects, #aboutme {
+  padding: 100px 20px; /* Extra space for fixed navbar */
+  min-height: 100vh;
+}
+
+nav a:hover {
+  color: #00bcd4; /* Highlight color on hover */
+}
