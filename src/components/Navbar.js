@@ -6,7 +6,7 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <div className="logo">My Portfolio</div>
+      <div className="logo">Harini B</div>
       <div className={`nav-links ${menuOpen ? "active" : ""}`}>
         <a href="#home">Home</a>
         <a href="#projects">Projects</a>
